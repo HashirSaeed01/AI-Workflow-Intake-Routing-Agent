@@ -1,0 +1,115 @@
+# Categories and routing rules for AI Workflow Intake & Routing Agent
+# Used by both LLM prompts and rule-based mock mode.
+
+categories:
+  - support_issue
+  - billing_issue
+  - sales_inquiry
+  - internal_ops_request
+  - technical_bug
+  - unknown
+
+urgency_levels:
+  - low
+  - medium
+  - high
+
+teams:
+  - Support
+  - Sales
+  - Engineering
+  - Ops
+
+# Keyword hints for mock/rule-based classification (case-insensitive)
+classification_keywords:
+  support_issue:
+    - support
+    - help
+    - broken
+    - not working
+    - account locked
+    - password reset
+    - can't login
+    - cant login
+  billing_issue:
+    - invoice
+    - billing
+    - charge
+    - refund
+    - payment
+    - subscription
+    - overcharged
+    - credit card
+  sales_inquiry:
+    - pricing
+    - demo
+    - enterprise
+    - quote
+    - purchase
+    - sales
+    - trial
+    - partnership
+  internal_ops_request:
+    - internal
+    - ops
+    - onboarding
+    - access request
+    - vendor
+    - procurement
+    - headcount
+  technical_bug:
+    - bug
+    - error
+    - crash
+    - api
+    - "500"
+    - exception
+    - regression
+    - outage
+    - downtime
+
+# Routing matrix: category -> default team
+routing_matrix:
+  support_issue: Support
+  billing_issue: Support
+  sales_inquiry: Sales
+  internal_ops_request: Ops
+  technical_bug: Engineering
+  unknown: Support
+
+# Priority scoring: base score by category (1-5)
+category_priority:
+  support_issue: 3
+  billing_issue: 3
+  sales_inquiry: 2
+  internal_ops_request: 2
+  technical_bug: 4
+  unknown: 2
+
+# Urgency modifiers applied to base priority (clamped 1-5)
+urgency_modifiers:
+  low: -1
+  medium: 0
+  high: 2
+
+# Escalation rules
+escalation:
+  escalate_if_urgency: high
+  escalate_if_priority_at_least: 5
+  escalate_teams:
+    support_issue: Support Lead
+    billing_issue: Finance + Support Lead
+    sales_inquiry: Sales Director
+    internal_ops_request: Ops Manager
+    technical_bug: Engineering On-Call
+    unknown: Support Lead
+
+llm:
+  model: gpt-4o-mini
+  temperature: 0.2
+  max_retries: 3
+  retry_backoff_seconds: 1.5
+
+logging:
+  level: INFO
+  format: "%(asctime)s | %(levelname)s | %(name)s | %(message)s"

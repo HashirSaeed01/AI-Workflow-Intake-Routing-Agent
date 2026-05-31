@@ -1,0 +1,246 @@
+[
+  {
+    "intake": {
+      "raw_text": "Hi Rozeta Labs team,\n\nThis is Sarah Chen from Northwind Analytics. We were charged $4,800 on invoice #INV-9921\nbut our enterprise plan should be $3,200/month. This happened twice last week and I need\nthis fixed ASAP before our finance close on Friday.\n\nCan someone review and issue a refund for the overcharge?\n\nThanks,\nSarah",
+      "source": "email",
+      "received_at": "2026-05-31T12:51:24.739208Z",
+      "metadata": {
+        "from": "sarah.chen@northwind.io",
+        "subject": "Wrong charge???"
+      }
+    },
+    "classification": {
+      "category": "billing_issue",
+      "confidence": 0.91,
+      "rationale": "Mock classifier matched 3 keyword(s) for 'billing_issue'."
+    },
+    "extraction": {
+      "customer_name": "Sarah Chen",
+      "urgency": "high",
+      "issue_summary": "This is Sarah Chen from Northwind Analytics",
+      "required_action": "Process refund review and respond within 24h"
+    },
+    "routing": {
+      "assigned_team": "Support",
+      "priority_score": 5,
+      "escalation_needed": true,
+      "escalation_target": "Finance + Support Lead",
+      "routing_rationale": "Category 'billing_issue' maps to Support. Base priority 3 with urgency modifier +2 \u2192 score 5. Escalation triggered (urgency=high, confidence=0.91)."
+    },
+    "response_draft": {
+      "draft_type": "customer_reply",
+      "content": "[Support] Process refund review and respond within 24h. Context: This is Sarah Chen from Northwind Analytics. Category=billing_issue, urgency=high. Assign owner and confirm SLA."
+    },
+    "human_review": {
+      "structured_extraction": {
+        "customer_name": "Sarah Chen",
+        "urgency": "high",
+        "issue_summary": "This is Sarah Chen from Northwind Analytics",
+        "required_action": "Process refund review and respond within 24h"
+      },
+      "classification": {
+        "category": "billing_issue",
+        "confidence": 0.91,
+        "rationale": "Mock classifier matched 3 keyword(s) for 'billing_issue'."
+      },
+      "routing": {
+        "assigned_team": "Support",
+        "priority_score": 5,
+        "escalation_needed": true,
+        "escalation_target": "Finance + Support Lead",
+        "routing_rationale": "Category 'billing_issue' maps to Support. Base priority 3 with urgency modifier +2 \u2192 score 5. Escalation triggered (urgency=high, confidence=0.91)."
+      },
+      "response_draft": {
+        "draft_type": "customer_reply",
+        "content": "[Support] Process refund review and respond within 24h. Context: This is Sarah Chen from Northwind Analytics. Category=billing_issue, urgency=high. Assign owner and confirm SLA."
+      },
+      "review_status": "approved",
+      "reviewer_notes": "Auto-approved (non-interactive mode)"
+    },
+    "workflow_id": "e7f37f3f-b128-41f2-91bd-70a5efa725c5",
+    "completed_at": "2026-05-31T12:51:24.740107Z"
+  },
+  {
+    "intake": {
+      "raw_text": "Inbound from VP Eng at Acme Robotics \u2014 they want pricing for 200-seat\nenterprise deployment, SSO, and a technical demo next Tuesday. Mentioned competitor quote\nfrom DataFlow Inc. High intent; asked for annual contract options and onboarding timeline.",
+      "source": "crm_note",
+      "received_at": "2026-05-31T12:51:24.740268Z",
+      "metadata": {
+        "rep": "jordan",
+        "account": "Acme Robotics"
+      }
+    },
+    "classification": {
+      "category": "sales_inquiry",
+      "confidence": 0.95,
+      "rationale": "Mock classifier matched 4 keyword(s) for 'sales_inquiry'."
+    },
+    "extraction": {
+      "customer_name": null,
+      "urgency": "medium",
+      "issue_summary": "Inbound from VP Eng at Acme Robotics \u2014 they want pricing for 200-seat",
+      "required_action": "Schedule discovery call and send pricing overview"
+    },
+    "routing": {
+      "assigned_team": "Sales",
+      "priority_score": 2,
+      "escalation_needed": false,
+      "escalation_target": null,
+      "routing_rationale": "Category 'sales_inquiry' maps to Sales. Base priority 2 with urgency modifier +0 \u2192 score 2."
+    },
+    "response_draft": {
+      "draft_type": "internal_action_note",
+      "content": "[Sales] Schedule discovery call and send pricing overview. Context: Inbound from VP Eng at Acme Robotics \u2014 they want pricing for 200-seat. Category=sales_inquiry, urgency=medium. Assign owner and confirm SLA."
+    },
+    "human_review": {
+      "structured_extraction": {
+        "customer_name": null,
+        "urgency": "medium",
+        "issue_summary": "Inbound from VP Eng at Acme Robotics \u2014 they want pricing for 200-seat",
+        "required_action": "Schedule discovery call and send pricing overview"
+      },
+      "classification": {
+        "category": "sales_inquiry",
+        "confidence": 0.95,
+        "rationale": "Mock classifier matched 4 keyword(s) for 'sales_inquiry'."
+      },
+      "routing": {
+        "assigned_team": "Sales",
+        "priority_score": 2,
+        "escalation_needed": false,
+        "escalation_target": null,
+        "routing_rationale": "Category 'sales_inquiry' maps to Sales. Base priority 2 with urgency modifier +0 \u2192 score 2."
+      },
+      "response_draft": {
+        "draft_type": "internal_action_note",
+        "content": "[Sales] Schedule discovery call and send pricing overview. Context: Inbound from VP Eng at Acme Robotics \u2014 they want pricing for 200-seat. Category=sales_inquiry, urgency=medium. Assign owner and confirm SLA."
+      },
+      "review_status": "approved",
+      "reviewer_notes": "Auto-approved (non-interactive mode)"
+    },
+    "workflow_id": "5d96182d-e2af-481b-9902-66e57d710a34",
+    "completed_at": "2026-05-31T12:51:24.741216Z"
+  },
+  {
+    "intake": {
+      "raw_text": "@ops-team need access provisioning for new vendor onboarding workflow in\nNotion + Jira for Q3 headcount plan. 3 contractors start Monday. Not urgent but need done\nby EOD tomorrow. Internal request \u2014 no customer impact.",
+      "source": "slack",
+      "received_at": "2026-05-31T12:51:24.741352Z",
+      "metadata": {
+        "channel": "#internal-ops",
+        "requester": "devon.park"
+      }
+    },
+    "classification": {
+      "category": "internal_ops_request",
+      "confidence": 0.95,
+      "rationale": "Mock classifier matched 5 keyword(s) for 'internal_ops_request'."
+    },
+    "extraction": {
+      "customer_name": null,
+      "urgency": "high",
+      "issue_summary": "@ops-team need access provisioning for new vendor onboarding workflow in",
+      "required_action": "Provision access and confirm completion with requester"
+    },
+    "routing": {
+      "assigned_team": "Ops",
+      "priority_score": 4,
+      "escalation_needed": true,
+      "escalation_target": "Ops Manager",
+      "routing_rationale": "Category 'internal_ops_request' maps to Ops. Base priority 2 with urgency modifier +2 \u2192 score 4. Escalation triggered (urgency=high, confidence=0.95)."
+    },
+    "response_draft": {
+      "draft_type": "internal_action_note",
+      "content": "[Ops] Provision access and confirm completion with requester. Context: @ops-team need access provisioning for new vendor onboarding workflow in. Category=internal_ops_request, urgency=high. Assign owner and confirm SLA."
+    },
+    "human_review": {
+      "structured_extraction": {
+        "customer_name": null,
+        "urgency": "high",
+        "issue_summary": "@ops-team need access provisioning for new vendor onboarding workflow in",
+        "required_action": "Provision access and confirm completion with requester"
+      },
+      "classification": {
+        "category": "internal_ops_request",
+        "confidence": 0.95,
+        "rationale": "Mock classifier matched 5 keyword(s) for 'internal_ops_request'."
+      },
+      "routing": {
+        "assigned_team": "Ops",
+        "priority_score": 4,
+        "escalation_needed": true,
+        "escalation_target": "Ops Manager",
+        "routing_rationale": "Category 'internal_ops_request' maps to Ops. Base priority 2 with urgency modifier +2 \u2192 score 4. Escalation triggered (urgency=high, confidence=0.95)."
+      },
+      "response_draft": {
+        "draft_type": "internal_action_note",
+        "content": "[Ops] Provision access and confirm completion with requester. Context: @ops-team need access provisioning for new vendor onboarding workflow in. Category=internal_ops_request, urgency=high. Assign owner and confirm SLA."
+      },
+      "review_status": "approved",
+      "reviewer_notes": "Auto-approved (non-interactive mode)"
+    },
+    "workflow_id": "2f7f47d1-bc13-49b5-b0ed-f2afcba56441",
+    "completed_at": "2026-05-31T12:51:24.741534Z"
+  },
+  {
+    "intake": {
+      "raw_text": "URGENT \u2014 Production API returning 500 errors since 09:14 UTC.\nEndpoint: POST /v2/workflows/run \u2014 customers cannot execute automations.\nError spike in dashboard. Possible regression after last night's deploy v2.14.3.\nNeed engineering on-call immediately.",
+      "source": "ticket",
+      "received_at": "2026-05-31T12:51:24.741646Z",
+      "metadata": {
+        "ticket_id": "TKT-44102",
+        "severity": "P1"
+      }
+    },
+    "classification": {
+      "category": "technical_bug",
+      "confidence": 0.95,
+      "rationale": "Mock classifier matched 4 keyword(s) for 'technical_bug'."
+    },
+    "extraction": {
+      "customer_name": null,
+      "urgency": "high",
+      "issue_summary": "URGENT \u2014 Production API returning 500 errors since 09:14 UTC",
+      "required_action": "Reproduce issue, triage severity, and patch or escalate"
+    },
+    "routing": {
+      "assigned_team": "Engineering",
+      "priority_score": 5,
+      "escalation_needed": true,
+      "escalation_target": "Engineering On-Call",
+      "routing_rationale": "Category 'technical_bug' maps to Engineering. Base priority 4 with urgency modifier +2 \u2192 score 5. Escalation triggered (urgency=high, confidence=0.95)."
+    },
+    "response_draft": {
+      "draft_type": "internal_action_note",
+      "content": "[Engineering] Reproduce issue, triage severity, and patch or escalate. Context: URGENT \u2014 Production API returning 500 errors since 09:14 UTC. Category=technical_bug, urgency=high. Assign owner and confirm SLA."
+    },
+    "human_review": {
+      "structured_extraction": {
+        "customer_name": null,
+        "urgency": "high",
+        "issue_summary": "URGENT \u2014 Production API returning 500 errors since 09:14 UTC",
+        "required_action": "Reproduce issue, triage severity, and patch or escalate"
+      },
+      "classification": {
+        "category": "technical_bug",
+        "confidence": 0.95,
+        "rationale": "Mock classifier matched 4 keyword(s) for 'technical_bug'."
+      },
+      "routing": {
+        "assigned_team": "Engineering",
+        "priority_score": 5,
+        "escalation_needed": true,
+        "escalation_target": "Engineering On-Call",
+        "routing_rationale": "Category 'technical_bug' maps to Engineering. Base priority 4 with urgency modifier +2 \u2192 score 5. Escalation triggered (urgency=high, confidence=0.95)."
+      },
+      "response_draft": {
+        "draft_type": "internal_action_note",
+        "content": "[Engineering] Reproduce issue, triage severity, and patch or escalate. Context: URGENT \u2014 Production API returning 500 errors since 09:14 UTC. Category=technical_bug, urgency=high. Assign owner and confirm SLA."
+      },
+      "review_status": "approved",
+      "reviewer_notes": "Auto-approved (non-interactive mode)"
+    },
+    "workflow_id": "488d73e3-695a-4a49-a0ce-5e1de2fc5b5b",
+    "completed_at": "2026-05-31T12:51:24.741818Z"
+  }
+]
