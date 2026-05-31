@@ -134,6 +134,4 @@ workflow_agent/
   utils/         # Logging, retry
 ```
 
-## License
 
-Prototype for internal evaluation at Rozeta Labs.
